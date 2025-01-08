@@ -1,14 +1,13 @@
 # Calculator QA Testing Project Documentation
 
 ## Project Overview
-This project demonstrates QA automation capabilities through a calculator web application with intentionally introduced edge cases and test failures to showcase testing system functionality. It includes a live test report viewer and is deployable to Railway.
+This project demonstrates QA automation capabilities through a calculator web application with intentionally introduced edge cases and test failures to showcase testing system functionality. The focus is on demonstrating comprehensive testing practices and methodologies.
 
 ## Technical Stack
 - **Frontend**: React + TypeScript
 - **Testing Framework**: Playwright
 - **Build Tool**: Vite
-- **CI/CD**: GitHub Actions
-- **Deployment**: Railway
+- **Development Server**: Vite Dev Server
 
 ## Application Features
 1. Basic Calculator Operations
@@ -90,45 +89,30 @@ test('keyboard number input', async ({ page }) => {
    - Multiple decimal points not properly handled
    - Used to demonstrate error detection capabilities
 
-## Testing Strategy
+## Development Environment
 
-### 1. Unit Tests
-- Individual button functionality
-- Number formatting
-- Operation calculations
+### Prerequisites
+- Node.js >= 18.0.0
+- npm or yarn
+- Modern web browser
 
-### 2. Integration Tests
-- Operation sequences
-- State management
-- Display updates
+### Setup
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Install Playwright browsers:
+   ```bash
+   npx playwright install
+   ```
 
-### 3. End-to-End Tests
-- Complete calculation workflows
-- Error scenarios
-- UI responsiveness
+### Running the Application
+```bash
+npm run dev
+```
 
-### 4. Visual Regression Tests
-- Button layout
-- Display formatting
-- Color schemes
-
-## Test Failure Analysis
-
-### Intentional Test Failures
-1. **Decimal Precision Tests**
-   - Purpose: Demonstrate handling of floating-point precision
-   - Expected Failure: Shows limitation in number formatting
-
-2. **Keyboard Input Tests**
-   - Purpose: Document unimplemented feature
-   - Expected Failure: Highlights missing functionality
-
-3. **Large Number Tests**
-   - Purpose: Show display limitations
-   - Expected Failure: Demonstrates overflow handling
-
-## Running Tests
-
+### Running Tests
 ```bash
 # Run all tests
 npm test
@@ -140,67 +124,35 @@ npm run test:ui
 npm run test:report
 ```
 
-## Deployment
+## Test Report Features
 
-### Railway Deployment
-1. Prerequisites:
-   - Railway account
-   - GitHub repository connected to Railway
+### 1. Interactive Report Viewer
+- Access via 🧪 button in application
+- Detailed test execution logs
+- Visual test results
 
-2. Configuration:
-   ```bash
-   # Install Railway CLI
-   npm i -g @railway/cli
+### 2. Test Categories
+- Unit Tests
+- Integration Tests
+- End-to-End Tests
+- Visual Regression Tests
 
-   # Login to Railway
-   railway login
+### 3. Failure Analysis
+- Stack traces
+- Screenshots
+- Step-by-step reproduction
+- Error messages
 
-   # Initialize project
-   railway init
-
-   # Deploy
-   railway up
-   ```
-
-3. Environment Variables:
-   - `PORT`: 3000 (default)
-   - `NODE_ENV`: production
-
-4. Build Command:
-   ```bash
-   npm run build
-   ```
-
-5. Start Command:
-   ```bash
-   npm run preview
-   ```
-
-### Automatic Deployments
-- Railway automatically deploys when changes are pushed to the main branch
-- Test reports are generated during the build process
-- Live test report is accessible via the "View Test Report" button
-
-## Test Report Access
-The test report can be accessed in two ways:
-1. Local Development:
-   - Click the 🧪 button after running tests
-   - Reports available at `/playwright-report/index.html`
-
-2. Production:
-   - Test reports are generated during deployment
-   - Accessible via the deployed application's UI
+### 4. Performance Metrics
+- Test execution time
+- Test suite duration
+- Resource usage
 
 ## Test Report Analysis
 - Total Tests: 15
 - Passed: 10
 - Failed: 5 (Intentional)
 - Skipped: 0
-
-### Failed Test Categories
-1. Input Validation (2 failures)
-2. Number Precision (2 failures)
-3. Feature Coverage (1 failure)
 
 ## QA Value Demonstration
 This project intentionally includes test failures to demonstrate:
@@ -227,6 +179,28 @@ This project intentionally includes test failures to demonstrate:
 3. Improve decimal precision handling
 4. Add scientific notation for large numbers
 5. Implement proper error boundary testing
+6. Enhance test reporting features
+
+## Best Practices Demonstrated
+1. **Test Organization**
+   - Clear test hierarchy
+   - Meaningful test descriptions
+   - Proper test isolation
+
+2. **Error Handling**
+   - Edge case coverage
+   - Error state management
+   - Graceful failure handling
+
+3. **Test Report Generation**
+   - Detailed failure information
+   - Visual evidence
+   - Performance metrics
+
+4. **Code Quality**
+   - TypeScript type safety
+   - Modern React practices
+   - Clean code principles
 
 ## Conclusion
 This project successfully demonstrates QA testing capabilities by:
@@ -234,4 +208,5 @@ This project successfully demonstrates QA testing capabilities by:
 - Documenting edge cases
 - Showing comprehensive test coverage
 - Demonstrating proper test reporting
-- Highlighting the importance of negative testing 
+- Highlighting the importance of negative testing
+- Providing clear test documentation 

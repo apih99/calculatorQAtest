@@ -1,6 +1,6 @@
 # Calculator QA Testing Project
 
-A demonstration project for QA automation testing capabilities, featuring a calculator web application with intentionally introduced test failures to showcase testing system functionality. Includes a live test report viewer and Railway deployment.
+A demonstration project for QA automation testing capabilities, featuring a calculator web application with intentionally introduced test failures to showcase testing system functionality. This project focuses on demonstrating QA testing practices and methodologies.
 
 ## 🚀 Quick Start
 
@@ -33,26 +33,6 @@ npm run test:report # View test report
 - Comprehensive test coverage
 - Visual regression testing
 
-## 🌐 Deployment
-
-### Railway Deployment
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/calculator-qa-project)
-
-1. Click the Deploy on Railway button or:
-```bash
-# Install Railway CLI
-npm i -g @railway/cli
-
-# Login and deploy
-railway login
-railway init
-railway up
-```
-
-2. Environment setup is automatic
-
-3. Your app will be live at: `https://your-app-name.railway.app`
-
 ## 📁 Project Structure
 
 ```
@@ -70,7 +50,6 @@ railway up
 - Decimal number support
 - Error handling
 - Comprehensive test suite with intentional failures
-- CI/CD integration
 - Live test report access
 
 ## 📚 Documentation
@@ -82,8 +61,6 @@ For detailed information about the project, testing strategy, and intentional te
 - React + TypeScript
 - Playwright for testing
 - Vite for building
-- GitHub Actions for CI/CD
-- Railway for deployment
 
 ## 📝 Note on Test Failures
 
@@ -97,10 +74,13 @@ For details about specific test failures and their purposes, refer to the docume
 
 ## 📊 Test Report Access
 
-1. Local Development:
+1. Development Environment:
    - Click the 🧪 button in the app
    - Or run `npm run test:report`
+   - Reports available at `/playwright-report/index.html`
 
-2. Production:
-   - Access via the 🧪 button on the deployed site
-   - Reports are generated during deployment 
+2. Test Report Features:
+   - Detailed test execution logs
+   - Screenshots of failures
+   - Test duration and performance metrics
+   - Failure analysis and debugging information 
