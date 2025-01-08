@@ -1,0 +1,89 @@
+.calculator {
+  background-color: white;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.display {
+  background-color: #808080;
+  padding: 20px;
+  margin-bottom: 1px;
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+}
+
+.equation {
+  font-size: 1rem;
+  min-height: 1.2em;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.current {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: #ccc;
+}
+
+button {
+  border: none;
+  background-color: #f0f0f0;
+  color: #000;
+  font-size: 1.25rem;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #ffaa33;
+}
+
+.special {
+  background-color: #e0e0e0;
+}
+
+.special:hover {
+  background-color: #d0d0d0;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* Remove border radius and shadows */
+.calculator,
+.display,
+button {
+  border-radius: 0;
+  box-shadow: none;
+} 
