@@ -1,13 +1,14 @@
 # Calculator QA Testing Project Documentation
 
 ## Project Overview
-This project demonstrates QA automation capabilities through a calculator web application with intentionally introduced edge cases and test failures to showcase testing system functionality.
+This project demonstrates QA automation capabilities through a calculator web application with intentionally introduced edge cases and test failures to showcase testing system functionality. It includes a live test report viewer and is deployable to Railway.
 
 ## Technical Stack
 - **Frontend**: React + TypeScript
 - **Testing Framework**: Playwright
 - **Build Tool**: Vite
 - **CI/CD**: GitHub Actions
+- **Deployment**: Railway
 
 ## Application Features
 1. Basic Calculator Operations
@@ -21,6 +22,11 @@ This project demonstrates QA automation capabilities through a calculator web ap
    - Current number display
    - Equation history
    - Error state handling
+
+3. Testing Features
+   - Live test report viewer (🧪 button)
+   - Intentional test failures for demonstration
+   - Comprehensive test coverage display
 
 ## Test Coverage and Known Issues
 
@@ -133,6 +139,57 @@ npm run test:ui
 # View test report
 npm run test:report
 ```
+
+## Deployment
+
+### Railway Deployment
+1. Prerequisites:
+   - Railway account
+   - GitHub repository connected to Railway
+
+2. Configuration:
+   ```bash
+   # Install Railway CLI
+   npm i -g @railway/cli
+
+   # Login to Railway
+   railway login
+
+   # Initialize project
+   railway init
+
+   # Deploy
+   railway up
+   ```
+
+3. Environment Variables:
+   - `PORT`: 3000 (default)
+   - `NODE_ENV`: production
+
+4. Build Command:
+   ```bash
+   npm run build
+   ```
+
+5. Start Command:
+   ```bash
+   npm run preview
+   ```
+
+### Automatic Deployments
+- Railway automatically deploys when changes are pushed to the main branch
+- Test reports are generated during the build process
+- Live test report is accessible via the "View Test Report" button
+
+## Test Report Access
+The test report can be accessed in two ways:
+1. Local Development:
+   - Click the 🧪 button after running tests
+   - Reports available at `/playwright-report/index.html`
+
+2. Production:
+   - Test reports are generated during deployment
+   - Accessible via the deployed application's UI
 
 ## Test Report Analysis
 - Total Tests: 15
